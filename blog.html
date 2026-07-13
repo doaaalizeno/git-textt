@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> المدونة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assels/css/bootstrap.css">
+    <link rel="stylesheet" href="assels/css/doaa.css">
+    <link rel="stylesheet" href="assels/css/style.css">
+    <link rel="stylesheet" href="assels/css/custom.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex algin-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">لوحة تحكم لمتجر </a>
+                    </div>
+                    <div class="px-3 ">
+                        <a href="#"><i class="fa-solid fa-chart-bar " id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="إكتب إسم المنتج للبحث">
+                    </form>
+                </div>
+                <div class="left-header d-flex algin-items-center gap-3 px-3">
+                    <div class="icons d-flex gap-3">
+                        <a href=""><i class="fa-regular fa-comment-dots"></i></a>
+                        <a href=""><i class="fa-regular fa-envelope"></i></a>
+                        <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                        <a href=""><i class="fa-regular fa-comment-dots"></i></a>
+                    </div>
+                    <div class="avatar">
+                        <img width="40" src="assels/images/avatar.png" alt="">
+                        <button id="toggleDark">🌙</button>
+                    </div>
+                    <a href=""><i class="fa-solid fa-bars-staggered active-user"></i></a>
+
+                </div>
+            </header>
+        </nav>
+
+
+        <div class="sidebar" id="sidebar">
+            <div class="profile ">
+                <img width="90px" src="assels/images/avatar.png" alt="">
+                <h3> دعاء علي زينو  </h3>
+            </div>
+
+            <ul class="ul-sidebar">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="index.html" class="m-r-10">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> تصنيفات المنتجات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> المنتجات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> الكتب الدراسية</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="students.html" class="m-r-10"> كافة الطلاب </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> المدرسين </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="blog.html" class="m-r-10"> المدونة </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> المستخدمين</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> الاعدادات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> الملاحظات </a>
+                </li>
+
+
+
+
+            </ul>
+        </div>
+        <div class="content p-3" id="content">
+            <div class="inner-content ">
+                <div class="container-fluid">
+                    <h4>كافة التدوينات </h4>
+
+                    <a href="add-post.html" type="button" class="btn btn-olive mb-2">
+                        إضافة تدوينة جديدة
+                    </a>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3">
+
+                                <table id="example" class="table table-hover table-striped display">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col"> عنوان المقال </th>
+                                            <th scope="col"> التصنيف </th>
+                                            <th scope="col"> تاريخ النشر </th>
+                                            <th scope="col"> الحالة </th>
+                                            <th scope="col"> الصورة </th>
+                                            <th scope="col"> العمليات</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td> تأثير الذكاء الصناعي</td>
+                                            <td> علوم حديثة</td>
+                                            <td> 26/6/2025 </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/rrr.jfif" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-blog"> حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#editArticleModal"
+                                                                href="#editArticleModal">تعديل </a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#viewArticleModal"
+                                                                href="#viewArticleModal"> عرض المقال </a> </li>
+
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> مستقبل الطاقة المتجددة </td>
+                                            <td> بيئة وتكنولوجيا </td>
+                                            <td> 15/8/2025 </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;" class="spinner-grow text-danger"
+                                                    role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                غير فعال
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/pngtree-lab-scientists-filling-a-petri-dish-in-a-closeup-shot-photo-image_18955876.jpg" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-blog"> حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#editArticleModal"
+                                                                href="#editArticleModal">تعديل </a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#view" href="#view"> عرض المقال </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td> الثورة في الطب الجيني </td>
+                                            <td> تكنولوجيا طبية </td>
+                                            <td> 02/11/2025 </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/r.jpg" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-blog"> حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#editArticleModal"
+                                                                href="#editArticleModal">تعديل </a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#viewArtic"
+                                                                href="#viewArtic"> عرض المقال </a> </li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+
+                                    </tbody>
+
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <!--  delete student -->
+
+
+    <div class="modal fade" id="delete-blog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> حذف المقال </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+
+                        <div class="alert alert-danger">
+                            هل انت متأكد من عملية الحذف للمقال
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> إغلاق</button>
+                            <button type="button" class="btn btn-primary"> حذف المقال </button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end delete student -->
+
+
+
+    <!-- المودال -->
+    <div class="modal fade" id="editArticleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">تعديل تفاصيل المقال</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label class="form-label">عنوان المقال</label>
+                            <input type="text" class="form-control" placeholder="اكتب العنوان هنا">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">التصنيف</label>
+                            <select class="form-select">
+                                <option>تقنية</option>
+                                <option>أعمال</option>
+                                <option>أخبار</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">تاريخ النشر</label>
+                            <input type="date" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">تحميل صورة</label>
+                            <input type="file" class="form-control" accept="image/*">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إلغاء</button>
+                    <button type="button" class="btn btn-primary">حفظ</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- مودال عرض المقال -->
+    <div class="modal fade" id="viewArticleModal" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المقال</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="articleTitle"> تاثير الذكاء الاصطناعي</h4>
+                    <p><strong>التصنيف:</strong> <span id="articleCategory">علوم حديثة</span></p>
+                    <p><strong>تاريخ النشر:</strong> <span id="articleDate">2025-06-26</span></p>
+                    <div class="mb-3">
+                        <img width="100px" id="articleImage" src="assels/images/rrr.jfif" alt="صورة المقال"
+                            class="img-fluid rounded">
+                    </div>
+                    <p id="articleContent">
+                        <b> العلوم الحديثة : </b>
+
+                        جسر بين المعرفة والتكنولوجيا
+
+                        تُعتبر العلوم الحديثة أحد أعمدة التطور الإنساني في القرن الحادي والعشرين، فهي تجمع بين البحث
+                        النظري والتطبيق العملي لتقديم حلول واقعية لمشكلات معقدة تواجه المجتمعات.
+
+                        من أبرز مجالات العلوم الحديثة:
+
+                        الذكاء الاصطناعي: حيث تسهم الخوارزميات الذكية في تحسين الرعاية الصحية، وتطوير السيارات ذاتية
+                        القيادة، وتعزيز كفاءة الأعمال.
+
+                        الطاقة المتجددة: التي أصبحت بديلًا ضروريًا لمصادر الطاقة التقليدية، من خلال الاعتماد على الشمس
+                        والرياح والمصادر النظيفة.
+
+                        التكنولوجيا الحيوية: التي تفتح آفاقًا لعلاج الأمراض الوراثية، وتطوير لقاحات أكثر فعالية، وتحسين
+                        الزراعة لزيادة الإنتاج.
+
+                        إنّ دور العلوم الحديثة لا يقتصر على خدمة الحاضر فحسب، بل يُعد استثمارًا في مستقبل أكثر استدامة،
+                        حيث يلتقي العلم بالإبداع لبناء عالم أفضل.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- مودال عرض المقال -->
+    <div class="modal fade" id="view" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المقال</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+                </div>
+                <div class="modal-body">
+                    <h4 id="articleTitle">مستقبل الطاقة المتجددة</h4>
+                    <p><strong>التصنيف:</strong> <span id="articleCategory">بيئة وتكنولوجيا</span></p>
+                    <p><strong>تاريخ النشر:</strong> <span id="articleDate">2025-08-15</span></p>
+                    <div class="mb-3">
+                        <img width="100px" id="articleImage" src="assels/images/pngtree-lab-scientists-filling-a-petri-dish-in-a-closeup-shot-photo-image_18955876.jpg" alt="صورة المقال"
+                            class="img-fluid rounded">
+                    </div>
+                    <p id="articleContent">
+                        <b> الطاقة المتجددة: </b>
+                        مستقبل مستدام للأجيال القادمة.
+                        <br><br>
+                        أصبحت الطاقة المتجددة الخيار الأمثل لمواجهة تحديات التغير المناخي وتقليل الاعتماد على الوقود
+                        الأحفوري.
+                        فهي تعتمد على مصادر طبيعية مثل الشمس، الرياح، والمياه التي لا تنضب.
+                        <br><br>
+                        من أبرز فوائد الطاقة المتجددة:
+                    <ul>
+                        <li>خفض الانبعاثات الكربونية الضارة بالبيئة.</li>
+                        <li>توفير مصادر طاقة آمنة ومستدامة.</li>
+                        <li>تعزيز استقلال الدول في مجال الطاقة.</li>
+                        <li>إيجاد فرص عمل جديدة في مجالات التكنولوجيا الخضراء.</li>
+                    </ul>
+                    إن الاستثمار في الطاقة المتجددة ليس مجرد خيار بيئي، بل هو ركيزة أساسية لبناء اقتصاد أخضر يحافظ على
+                    الكوكب ويضمن مستقبلًا أفضل.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">إغلاق</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- مودال عرض المقال الخاص بالطب الجيني -->
+<div class="modal fade" id="viewArtic" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">عرض المقال</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
+            </div>
+            <div class="modal-body">
+                <h4 id="articleTitle">الثورة في الطب الجيني</h4>
+                <p><strong>التصنيف:</strong> <span id="articleCategory">تكنولوجيا طبية</span></p>
+                <p><strong>تاريخ النشر:</strong> <span id="articleDate">2025-11-02</span></p>
+                <div class="mb-3">
+                    <img width="100px" id="articleImage" src="assels/images/r.jpg" alt="صورة المقال"
+                        class="img-fluid rounded">
+                </div>
+                <p id="articleContent">
+                    <b> الطب الجيني: </b>
+                    مستقبل الرعاية الصحية الشخصية.
+                    <br><br>
+                    يشهد العالم ثورة في مجال الطب الجيني، حيث أصبح تعديل الجينات 
+                    وتقنيات مثل CRISPR من أبرز الابتكارات التي غيرت مفهوم العلاج الطبي.
+                    <br><br>
+                    من أبرز فوائد الطب الجيني:
+                    <ul>
+                        <li>علاج الأمراض الوراثية المستعصية.</li>
+                        <li>تطوير علاجات مخصصة لكل مريض بناءً على حمضه النووي.</li>
+                        <li>تحسين فعالية الأدوية والتقليل من آثارها الجانبية.</li>
+                        <li>إمكانية الوقاية من الأمراض قبل ظهورها عبر الفحوص الجينية.</li>
+                    </ul>
+                    إن الطب الجيني لا يمثل مجرد نقلة علمية، بل هو أمل جديد لملايين المرضى حول العالم 
+                    لبناء مستقبل صحي أكثر إشراقًا.
+                </p>
+            <
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        document.getElementById('toggleDark').addEventListener('click', function () {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+
+    <script src="assels/js/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assels//js/charts.js"></script>
+    <!-- استدعاء ملفات الجافا -->
+    <script src="assels/js/bootstrap.js"></script>
+    <script src="assels/js/script.js"></script>
+
+</body>
+
+</html>

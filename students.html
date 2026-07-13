@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> كافة الطلاب</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assels/css/bootstrap.css">
+    <link rel="stylesheet" href="assels/css/doaa.css">
+    <link rel="stylesheet" href="assels/css/style.css">
+    <link rel="stylesheet" href="assels/css/custom.css">
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+        <nav class="fixed-top">
+            <header class="header d-flex justify-content-between py-1">
+                <div class="right-header d-flex algin-items-center gap-3">
+                    <div class="logo d-none d-md-block">
+                        <a href="/">لوحة تحكم لمتجر </a>
+                    </div>
+                    <div class="px-3 ">
+                        <a href="#"><i class="fa-solid fa-chart-bar " id="sidebar-toggle"></i></a>
+                    </div>
+                    <form action="" class="d-none d-md-block">
+                        <input type="text" class="form-control" placeholder="إكتب إسم المنتج للبحث">
+                    </form>
+                </div>
+                <div class="left-header d-flex algin-items-center gap-3 px-3">
+                    <div class="icons d-flex gap-3">
+                        <a href=""><i class="fa-regular fa-comment-dots"></i></a>
+                        <a href=""><i class="fa-regular fa-envelope"></i></a>
+                        <a class="position-relative bell" href=""><i class="fa-regular fa-bell"></i></a>
+                        <a href=""><i class="fa-regular fa-comment-dots"></i></a>
+                    </div>
+                    <div class="avatar">
+                        <img width="40" src="assels/images/avatar.png" alt="">
+                    </div>
+                    <a href=""><i class="fa-solid fa-bars-staggered active-user"></i></a>
+
+                </div>
+            </header>
+        </nav>
+
+
+        <div class="sidebar " id="sidebar">
+            <div class="profile ">
+                <img width="90px" src="assels/images/avatar.png" alt="">
+                <h3>دعاء علي زينو </h3>
+            </div>
+
+            <ul class="ul-sidebar">
+                <li class="mb-2 active">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="index.html" class="m-r-10">الصفحة الرئيسية</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> تصنيفات المنتجات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href=" " class="m-r-10"> المنتجات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> الكتب الدراسية</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="students.html" class="m-r-10"> كافة الطلاب </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> المدرسين </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="blog.html" class="m-r-10"> المدونة </a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> المستخدمين</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> الاعدادات</a>
+                </li>
+                <li class="mb-2">
+                    <i class="fa-solid fa-house-user fs-5"></i>
+                    <a href="" class="m-r-10"> الملاحظات </a>
+                </li>
+
+
+
+
+            </ul>
+        </div>
+        <div class="content p-3" id="content">
+            <div class="inner-content ">
+                <div class="container-fluid">
+                    <h4>كافة الطلاب </h4>
+
+                    <button type="button" class="btn btn-olive mb-2" data-bs-toggle="modal"
+                        data-bs-target="#add-student">
+                        إضافة طالب جديد
+                    </button>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card p-3">
+
+                                <table id="example" class="table table-hover table-striped display">
+                                    <thead>
+                                        <tr>
+                                            <th scope="col">#</th>
+                                            <th scope="col"> اسم الطالب</th>
+                                            <th scope="col"> رقم الهاتف</th>
+                                            <th scope="col"> البريد الإلكتروني</th>
+                                            <th scope="col"> الحالة </th>
+                                            <th scope="col"> الصورة </th>
+                                            <th scope="col"> العمليات</th>
+                                        </tr>
+                                    </thead>
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td> دعاء علي زينو</td>
+                                            <td> 064523413</td>
+                                            <td> do123@gmail.com </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/avatar.png" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student"> حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td> رامي الأحمد </td>
+                                            <td> 0796543210 </td>
+                                            <td> rami.ahmad@gmail.com </td>
+
+                                            <td>
+                                                <div style="width: 12px; height: 12px;" class="spinner-grow text-danger"
+                                                    role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                غير مفعل
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/qq.png!w700wp" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student"> حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>سارة محمود</td>
+                                            <td>078445566</td>
+                                            <td>sara.mh@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/ww.jfif" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student"> حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">4</th>
+                                            <td>ياسين عمر</td>
+                                            <td>077778899</td>
+                                            <td>yassin.omar@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/www.png!f305cw" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student"> حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">5</th>
+                                            <td>ليلى ناصر</td>
+                                            <td>075223344</td>
+                                            <td>layla.nsr@gmail.com</td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <div style="width: 12px; height: 12px;"
+                                                        class="spinner-grow text-danger" role="status">
+                                                        <span class="visually-hidden">Loading...</span>
+                                                    </div>
+                                                    غير مفعل
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/eee.jfif" alt="">
+                                            </td>
+                                            <td>
+                                                <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                                    العمليات
+                                                </button>
+                                                <ul class="dropdown-menu">
+                                                    <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                            href="#delete-student"> حذف</a></li>
+                                                    <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                            data-bs-target="#edit-student" href="#edit-student">تعديل
+                                                        </a></li>
+                                                    <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                    <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                    <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                </ul>
+
+
+
+                                            </td>
+                                        </tr>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">6</th>
+                                            <td>مروان خالد</td>
+                                            <td>074665544</td>
+                                            <td>marwan.kh@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/ee.jpg" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">7</th>
+                                            <td> احمد الخالد</td>
+                                            <td>075523413</td>
+                                            <td>wll@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/e.jpg" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">8</th>
+                                            <td>عمر سعيد</td>
+                                            <td>077998877</td>
+                                            <td>omar@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/ttt.png!f305cw" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">9</th>
+                                            <td>ليلى حسن</td>
+                                            <td>079112233</td>
+                                            <td>layla@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/tt.png" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">10</th>
+                                            <td> نور العلي</td>
+                                            <td> 655423145</td>
+                                            <td> no1@gmail.com </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/b6.png" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">11</th>
+                                            <td> وليد بركات </td>
+                                            <td> 075523413</td>
+                                            <td> wll@gmail.com </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;" class="spinner-grow text-danger"
+                                                    role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                غير مفعل
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/qq.png!w700wp" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">12</th>
+                                            <td> هديل الاحمد</td>
+                                            <td> 0645287613</td>
+                                            <td> had@gmail.com </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/b9.png" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"> 13</th>
+                                            <td> محمد الابراهيم</td>
+                                            <td> 0906523413</td>
+                                            <td> mha@gmail.com </td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;" class="spinner-grow text-danger"
+                                                    role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                غير مفعل
+
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/avatar.png" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a> </li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">14</th>
+                                            <td>أحمد يوسف</td>
+                                            <td>077123456</td>
+                                            <td>ahmed@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;"
+                                                    class="spinner-grow text-success" role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                فعال
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/g.jpg" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <th scope="row">15</th>
+                                            <td>سارة خالد</td>
+                                            <td>078987654</td>
+                                            <td>sara@gmail.com</td>
+                                            <td>
+                                                <div style="width: 12px; height: 12px;" class="spinner-grow text-danger"
+                                                    role="status">
+                                                    <span class="visually-hidden">Loading...</span>
+                                                </div>
+                                                غير مفعل
+                                            </td>
+                                            <td>
+                                                <img width="50" src="assels/images/t.png" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="dropdown">
+                                                    <button class="btn btn-olive btn-sm dropdown-toggle" type="button"
+                                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                                        العمليات
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                href="#delete-student">
+                                                                حذف</a></li>
+                                                        <li><a class="dropdown-item" data-bs-toggle="modal"
+                                                                data-bs-target="#edit-student"
+                                                                href="#edit-student">تعديل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> التفاصيل </a></li>
+                                                        <li><a class="dropdown-item" href="#"> إضافة فاتورة </a></li>
+                                                        <li><a class="dropdown-item" href="#"> الشهادة </a></li>
+                                                    </ul>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+    </div>
+
+
+
+
+
+    <!-- Add student -->
+
+
+
+    <div class="modal fade" id="add-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> إضافة طالب جديد </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label"> إسم الطالب </label>
+                                <input type="text" class="form-control" placeholder="إدخال  اسم الطالب">
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label"> البريد الإلكتروني </label>
+                                <input type="email" class="form-control" placeholder="إدخال البريد الإلكتروني">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الهاتف </label>
+                                <input type="text  " class="form-control">
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الطالب </label>
+                                <input type=" text" class="form-control">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label"> التفاصيل </label>
+                            <textarea class="form-control" name="" id=""></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label"> تحميل صورة الطالب </label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> إغلاق</button>
+                            <button type="button" class="btn btn-primary"> حفظ البيانات </button>
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end add student -->
+
+
+
+    <!--  delete student -->
+
+
+
+    <div class="modal fade" id="delete-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> حذف بيانات الطالب </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+
+
+                        <div class="alert alert-danger">
+                            هل انت متأكد من عملية الحذف للطالب
+                        </div>
+
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> إغلاق</button>
+                            <button type="button" class="btn btn-primary"> حذف البيانات </button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end delete student -->
+
+    <!--  edit student -->
+
+
+
+    <div class="modal fade" id="edit-student" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel"> تعديل بيانات الطالب </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label"> إسم الطالب </label>
+                                <input type="text" class="form-control" placeholder="إدخال  اسم الطالب"
+                                    value="دعاء علي زينو">
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label"> البريد الإلكتروني </label>
+                                <input type="email" class="form-control" placeholder="إدخال البريد الإلكتروني"
+                                    value=" do123@gmail.com">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الهاتف </label>
+                                <input type="text  " class="form-control" value="064523413">
+                            </div>
+                            <div class="mb-3 col">
+                                <label class="form-label"> رقم الطالب </label>
+                                <input type=" text" class="form-control" value="">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="form-label"> التفاصيل </label>
+                            <textarea class="form-control" name="" id=""></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="formFile" class="form-label"> تحميل صورة الطالب </label>
+                            <input class="form-control" type="file" id="formFile">
+                        </div>
+
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal"> إغلاق</button>
+                            <button type="button" class="btn btn-primary"> تعديل البيانات </button>
+                        </div>
+
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- end  edit student -->
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="assels/js/datatables.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="assels/js/charts.js"></script> 
+    <!-- استدعاء ملفات الجافا -->
+    <script src="assels/js/bootstrap.js"></script>
+    <script src="assels/js/script.js"></script>
+
+
+</body>
+
+</html>

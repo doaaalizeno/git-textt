@@ -1,0 +1,540 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@300;400;700;800&family=Cairo:wght@200..1000&family=Playwrite+DK+Loopet:wght@100..400&family=Tajawal:wght@200;300;400;500;700;800;900&display=swap');
+
+
+body {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+
+    background-color: #22352e1f;
+
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    background-color: white;
+    box-shadow: 3px 3px 3px #cccccc7a;
+
+}
+
+
+.logo {
+    text-align: center;
+    width: 250px;
+    border-left: 1px solid #ccc;
+
+}
+
+.logo a {
+    font-size: 20px;
+    color: black;
+    font-weight: bold;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: rgba(9, 41, 30, 0.911);
+    height: 100vh;
+    position: fixed;
+    overflow: hidden;
+    transition: 0.6s;
+    overflow-y: scroll;
+    top: 40px;
+    z-index: 9999;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.content {
+
+    height: calc(100vh - 40px);
+    margin-right: 250px;
+    margin-top: 55px;
+    transition: 0.6s;
+
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        width: 250px;
+        right: -250px;
+    }
+
+    .content {
+        margin-right: 0;
+    }
+     
+}
+
+.avatar img {
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+}
+
+.icons i,
+#sidebar-toggle,
+.active-user {
+
+
+    font-size: 20px;
+    color: rgba(16, 56, 43, 0.685);
+    ;
+}
+
+
+
+.profile {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile img {
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.89);
+    padding: 2px;
+}
+
+.profile h3 {
+    color: rgba(255, 255, 255, 0.877);
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.ul-sidebar {
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.ul-sidebar li {
+    cursor: pointer;
+
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.active {
+    background-color: rgb(187, 158, 122);
+    ;
+}
+
+.ul-sidebar li:hover {
+    cursor: pointer;
+    background-color: rgb(228, 193, 150);
+    padding: 5px;
+    border-radius: 5px;
+
+}
+
+.ul-sidebar li a,
+.ul-sidebar li i {
+    color: white;
+
+}
+
+.btn-olive {
+    background-color: #12685a; /* اللون الزيتي */
+    color: white;              /* لون الخط أبيض */
+    border: none;              /* إزالة أي حدود */
+}
+
+.btn-olive:hover {
+    background-color: rgb(187, 158, 122);/* درجة أغمق عند المرور بالماوس */
+}
+
+
+
+
+
+
+
+/* تخصيص عرض شريط التمرير */
+#sidebar::-webkit-scrollbar {
+    width: 8px;
+    /* عرض شريط التمرير */
+}
+
+/* تخصيص المسار (الخلفية) */
+#sidebar::-webkit-scrollbar-track {
+    background: rgb(187, 158, 122);
+    /* لون الخلفية */
+    border-radius: 10px;
+    /* حواف مستديرة */
+}
+
+/* تخصيص الجزء المتحرك */
+#sidebar::-webkit-scrollbar-thumb {
+    background: #596d4ce8;
+    border-radius: 10px;
+}
+
+/* تخصيص اللون عند التمرير فوقه */
+#sidebar::-webkit-scrollbar-thumb:hover {
+    background: #707250e0;
+}
+
+.bell::after {
+    position: absolute;
+    content: "5";
+    background-color: red;
+    width: 12px;
+    border-radius: 50%;
+    height: 12px;
+    color: white;
+    font-size: 10px;
+    top: -5px;
+    right: -5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.stat1 {
+
+
+    /* background-image: linear-gradient(45deg , rgb(15, 48, 12) , rgba(177, 175, 147, 0.445)); */
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 480px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+ 
+.stat1 .stat-text{
+    min-width: 0;
+}
+
+.stat-green {
+    background: #5A3F37;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1d4d2c, #bdbd5fad);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1d4e2d, #b9b95db6);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+
+}
+
+.stat-red {
+
+    background: #3E5151;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #DECBA4, #3E5151);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #DECBA4, #3E5151);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.stat-blue {
+    background: #2C3E50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #4ca2afa6, #2C3E50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #4ca2af9c, #2C3E50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.stat-yellow {
+    background: #2C3E50;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #fd736c9f, #2C3E50);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #fd736c7c, #2C3E50);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
+}
+
+.stat1 h3 {
+    color: white;
+    font-family: Almarai;
+    font-size: 20px;
+    font-weight: bold;
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-left: 8px;
+    
+}
+
+.stat1 h4 {
+    color: rgba(255, 255, 255, 0.699);
+    font-family: Almarai;
+    font-size: 15px;
+    font-weight: bold;
+}
+.stat1 i{
+     right: 30px;
+}
+
+#chart1,
+#chart {
+    height: 400px;
+}
+
+.item-side-menu {
+    justify-content: space-between;
+    align-items: center;
+    background-color: #42856f1e;
+    border-radius: 15px;
+    padding: 10px;
+    border-bottom: 1px solid #6cb8db;
+    /* إضافة ظل */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    /* عشان يبان الظل */
+    transition: 0.3s;
+
+}
+
+.item-side-menu:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+    background-color: #7db68f62;
+}
+
+.avatar-info {
+    align-items: center;
+    gap: 15px;
+
+}
+
+.avatar-info img {
+    border-radius: 50%;
+    border: 1px solid #1c805a44;
+
+}
+
+.avatar-info h4 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1d4e2d;
+}
+
+.contact-info {
+    display: flex;
+    gap: 15px;
+
+}
+
+.contact-info i {
+    font-size: 25px;
+    transition: 0.3s;
+}
+
+.contact-info i:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.whatsapp-icon {
+    color: #3bca6b;
+    font-size: 25px;
+}
+
+.messenger-icon {
+    color: #00B2FF;
+    font-size: 25px;
+}
+
+.instagram-icon {
+    color: #C13584;
+    font-size: 25px;
+
+}
+
+.grow-user {
+    position: absolute;
+    top: 0;
+}
+
+.alert-success {
+    font-size: 19px;
+    text-shadow: 2px 2px 5px rgba(167, 206, 29, 0.76);
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+/* الرسالة  */
+.messages-area {
+    background-color: rgb(243, 239, 216);
+    width: 300px;
+    left: -30px;
+    top: 35px;
+    display: inline-block;
+    background: #f1f1f1;
+    padding: 10px 15px;
+    max-width: 250px;
+    border-radius: 25px 25px 25px 0;
+    /* زوايا مختلفة */
+    font-family: sans-serif;
+    border-bottom: 1px solid #508fac;
+    /* إضافة ظل */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    /* اخفاء الرسالة فقط عند الضغط عليها تظهر القائمة */
+    display: none;
+}
+/* ميديا كويري لشاشات الموبايل */
+@media (max-width: 576px) {
+  #messages-area {
+    position: fixed !important; /* ثبتيها على الشاشة */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100% !important;
+    max-height: 100vh;
+    overflow-y: auto; /* سكرول إذا في رسائل كتيرة */
+    background: #fff; /* خلفية واضحة */
+    z-index: 1050; /* فوق كل العناصر */
+    border-radius: 0; /* بدون زوايا مستديرة */
+    padding: 15px;
+  }
+
+  #messages-area h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    white-space: normal; /* يخلي النص ينزل على أسطر */
+  }
+
+  #messages-area li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+  }
+
+  #messages-area h4 {
+    white-space: normal; /* يخلي الاسم يظهر كامل */
+    font-size: 16px;
+  }
+}
+.messages-area li{
+    /* خطوط بين العناصر */
+    border-bottom: 1px solid #a2dbca86;
+    cursor: pointer;
+    transition: 0.3s;
+
+}
+.messages-area li:hover{
+    background-color: #cccccc6e;
+}
+.messages-header{
+    background-color: #a9ac8a;
+    width: 100%;
+    height: 50px;
+    text-shadow: 5px 5px 9px rgb(9, 82, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px 25px 25px 0;
+     
+    
+    /* لازم الاب يكون ريلاتيف */
+    position: relative;
+
+}
+/* السهم تبع الرسالة */
+.messages-header::after{
+    position: absolute;
+    content: "";
+    top: -25px;
+    left: 20px;
+    border:  15px solid;
+    /* transparent يعني يحول باقي الالوان لشفاف */
+    border-color: transparent  transparent  #a9ac8a  transparent;
+
+}
+
+.messages-header h3{
+    color: white;
+    font-size: 25px;
+
+}
+.item-menu-left{
+    align-items: center;
+}
+.item-menu-left img{
+    width: 50px;
+    border-radius: 50%;
+    border: 1px solid #1c805a67;
+
+
+
+}
+.item-menu-left h4{
+font-size: 18px;
+}
+.messages-container{
+    cursor: pointer;
+
+}
+
+  table tbody tr {
+        height: 70px; /* ارتفاع موحد لكل الصفوف */
+    }
+
+    table tbody td, 
+    table tbody th {
+        vertical-align: middle; /* النص والايقونات تكون بالوسط عموديًا */
+    }
+
+    table tbody img {
+        height: 50px; /* تصغير الصور داخل الخلايا */
+        width: 50px;
+        object-fit: cover; /* ضبط أبعاد الصورة بدون تمدد */
+        border-radius: 50%; /* يخلي الصورة دائرية */
+    }
+
+     /* زر الوضع اليلي */
+     /* زر الأيقونة */
+  #toggleDark {
+    background: none;
+    border: none;
+    font-size: 19px;
+    cursor: pointer;
+     
+    
+  }
+
+  /* عند المرور */
+  #toggleDark:hover {
+    transform: scale(1.2);
+  }
+
+  /* الوضع الليلي */
+  body.dark-mode {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+  }
+   
+

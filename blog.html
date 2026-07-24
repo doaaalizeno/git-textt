@@ -4,11 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> المدونة</title>
+    <title>المدونة</title>
+
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Bootstrap -->
     <link rel="stylesheet" href="assels/css/bootstrap.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/jquery.dataTables.min.css">
+
+    <!-- Responsive -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.dataTables.min.css">
+
+    <!-- Buttons -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.4.2/css/buttons.dataTables.min.css">
+
+    <!-- ملفات المشروع -->
     <link rel="stylesheet" href="assels/css/doaa.css">
     <link rel="stylesheet" href="assels/css/style.css">
     <link rel="stylesheet" href="assels/css/custom.css">
@@ -18,7 +33,7 @@
 
     <div class="main-wrapper">
         <nav class="fixed-top">
-            <header class="header d-flex justify-content-between py-1">
+            <header class="header d-flex justify-content-between py-3">
                 <div class="right-header d-flex algin-items-center gap-3">
                     <div class="logo d-none d-md-block">
                         <a href="/">لوحة تحكم لمتجر </a>
@@ -39,7 +54,7 @@
                     </div>
                     <div class="avatar">
                         <img width="40" src="assels/images/avatar.png" alt="">
-                        <button id="toggleDark">🌙</button>
+                        <!-- <button id="toggleDark">🌙</button> -->
                     </div>
                     <a href=""><i class="fa-solid fa-bars-staggered active-user"></i></a>
 
@@ -51,7 +66,7 @@
         <div class="sidebar" id="sidebar">
             <div class="profile ">
                 <img width="90px" src="assels/images/avatar.png" alt="">
-                <h3> دعاء علي زينو  </h3>
+                <h3> دعاء علي زينو </h3>
             </div>
 
             <ul class="ul-sidebar">
@@ -104,7 +119,7 @@
         <div class="content p-3" id="content">
             <div class="inner-content ">
                 <div class="container-fluid">
-                    <h4>كافة التدوينات </h4>
+                    <h4 class="py-4">كافة التدوينات </h4>
 
                     <a href="add-post.html" type="button" class="btn btn-olive mb-2">
                         إضافة تدوينة جديدة
@@ -113,7 +128,8 @@
                         <div class="col">
                             <div class="card p-3">
 
-                                <table id="example" class="table table-hover table-striped display">
+                                <table id="example" class="table table-hover table-striped display nowrap"
+                                    style="width:100%">
                                     <thead>
                                         <tr>
                                             <th scope="col">#</th>
@@ -177,7 +193,9 @@
                                                 غير فعال
                                             </td>
                                             <td>
-                                                <img width="50" src="assels/images/pngtree-lab-scientists-filling-a-petri-dish-in-a-closeup-shot-photo-image_18955876.jpg" alt="">
+                                                <img width="50"
+                                                    src="assels/images/pngtree-lab-scientists-filling-a-petri-dish-in-a-closeup-shot-photo-image_18955876.jpg"
+                                                    alt="">
                                             </td>
                                             <td>
                                                 <div class="dropdown">
@@ -226,8 +244,8 @@
                                                                 data-bs-target="#editArticleModal"
                                                                 href="#editArticleModal">تعديل </a></li>
                                                         <li><a class="dropdown-item" data-bs-toggle="modal"
-                                                                data-bs-target="#viewArtic"
-                                                                href="#viewArtic"> عرض المقال </a> </li>
+                                                                data-bs-target="#viewArtic" href="#viewArtic"> عرض
+                                                                المقال </a> </li>
                                                     </ul>
                                                 </div>
                                             </td>
@@ -392,8 +410,9 @@
                     <p><strong>التصنيف:</strong> <span id="articleCategory">بيئة وتكنولوجيا</span></p>
                     <p><strong>تاريخ النشر:</strong> <span id="articleDate">2025-08-15</span></p>
                     <div class="mb-3">
-                        <img width="100px" id="articleImage" src="assels/images/pngtree-lab-scientists-filling-a-petri-dish-in-a-closeup-shot-photo-image_18955876.jpg" alt="صورة المقال"
-                            class="img-fluid rounded">
+                        <img width="100px" id="articleImage"
+                            src="assels/images/pngtree-lab-scientists-filling-a-petri-dish-in-a-closeup-shot-photo-image_18955876.jpg"
+                            alt="صورة المقال" class="img-fluid rounded">
                     </div>
                     <p id="articleContent">
                         <b> الطاقة المتجددة: </b>
@@ -421,62 +440,70 @@
         </div>
     </div>
     <!-- مودال عرض المقال الخاص بالطب الجيني -->
-<div class="modal fade" id="viewArtic" tabindex="-1" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">عرض المقال</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
-            </div>
-            <div class="modal-body">
-                <h4 id="articleTitle">الثورة في الطب الجيني</h4>
-                <p><strong>التصنيف:</strong> <span id="articleCategory">تكنولوجيا طبية</span></p>
-                <p><strong>تاريخ النشر:</strong> <span id="articleDate">2025-11-02</span></p>
-                <div class="mb-3">
-                    <img width="100px" id="articleImage" src="assels/images/r.jpg" alt="صورة المقال"
-                        class="img-fluid rounded">
+    <div class="modal fade" id="viewArtic" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">عرض المقال</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="إغلاق"></button>
                 </div>
-                <p id="articleContent">
-                    <b> الطب الجيني: </b>
-                    مستقبل الرعاية الصحية الشخصية.
-                    <br><br>
-                    يشهد العالم ثورة في مجال الطب الجيني، حيث أصبح تعديل الجينات 
-                    وتقنيات مثل CRISPR من أبرز الابتكارات التي غيرت مفهوم العلاج الطبي.
-                    <br><br>
-                    من أبرز فوائد الطب الجيني:
+                <div class="modal-body">
+                    <h4 id="articleTitle">الثورة في الطب الجيني</h4>
+                    <p><strong>التصنيف:</strong> <span id="articleCategory">تكنولوجيا طبية</span></p>
+                    <p><strong>تاريخ النشر:</strong> <span id="articleDate">2025-11-02</span></p>
+                    <div class="mb-3">
+                        <img width="100px" id="articleImage" src="assels/images/r.jpg" alt="صورة المقال"
+                            class="img-fluid rounded">
+                    </div>
+                    <p id="articleContent">
+                        <b> الطب الجيني: </b>
+                        مستقبل الرعاية الصحية الشخصية.
+                        <br><br>
+                        يشهد العالم ثورة في مجال الطب الجيني، حيث أصبح تعديل الجينات
+                        وتقنيات مثل CRISPR من أبرز الابتكارات التي غيرت مفهوم العلاج الطبي.
+                        <br><br>
+                        من أبرز فوائد الطب الجيني:
                     <ul>
                         <li>علاج الأمراض الوراثية المستعصية.</li>
                         <li>تطوير علاجات مخصصة لكل مريض بناءً على حمضه النووي.</li>
                         <li>تحسين فعالية الأدوية والتقليل من آثارها الجانبية.</li>
                         <li>إمكانية الوقاية من الأمراض قبل ظهورها عبر الفحوص الجينية.</li>
                     </ul>
-                    إن الطب الجيني لا يمثل مجرد نقلة علمية، بل هو أمل جديد لملايين المرضى حول العالم 
+                    إن الطب الجيني لا يمثل مجرد نقلة علمية، بل هو أمل جديد لملايين المرضى حول العالم
                     لبناء مستقبل صحي أكثر إشراقًا.
-                </p>
-            <
+                    </p>
+                    < <script>
+                        document.getElementById('toggleDark').addEventListener('click', function () {
+                        document.body.classList.toggle('dark-mode');
+                        });
+                        </script>
+
+                        <!-- jQuery -->
+                        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+                        <!-- DataTables -->
+                        <script src="assels/js/datatables.js"></script>
+
+                        <!-- Responsive -->
+                        <script
+                            src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+
+                        <!-- Buttons -->
+                        <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+                        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.html5.min.js"></script>
+                        <script src="https://cdn.datatables.net/buttons/2.4.2/js/buttons.print.min.js"></script>
+
+                        <!-- Bootstrap -->
+                        <script src="assels/js/bootstrap.js"></script>
+
+                        <!-- ApexCharts -->
+                        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+                        <script src="assels/js/charts.js"></script>
+
+                        <!-- ملف الجافاسكربت الخاص بك -->
+                        <script src="assels/js/script.js"></script>
 
 
-
-
-
-
-
-
-
-
-
-    <script>
-        document.getElementById('toggleDark').addEventListener('click', function () {
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
-
-    <script src="assels/js/datatables.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-    <script src="assels//js/charts.js"></script>
-    <!-- استدعاء ملفات الجافا -->
-    <script src="assels/js/bootstrap.js"></script>
-    <script src="assels/js/script.js"></script>
 
 </body>
 

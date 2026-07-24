@@ -19,6 +19,8 @@ a {
 .header {
     background-color: white;
     box-shadow: 3px 3px 3px #cccccc7a;
+    padding-top: 80px;
+    
 
 }
 
@@ -44,10 +46,12 @@ a {
     overflow: hidden;
     transition: 0.6s;
     overflow-y: scroll;
-    top: 40px;
+    top: 71px;
     z-index: 9999;
     box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+
 }
+
 
 .content {
 
@@ -55,6 +59,7 @@ a {
     margin-right: 250px;
     margin-top: 55px;
     transition: 0.6s;
+    padding-top: 80px;
 
 }
 
@@ -62,11 +67,24 @@ a {
     .sidebar {
         width: 250px;
         right: -250px;
+        position: fixed;
+        top: 64px;
+        height: calc(100vh - 64px);
+         z-index: 999;
+
     }
 
     .content {
         margin-right: 0;
     }
+    nav{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 64px;
+    z-index: 1000;
+}
      
 }
 
@@ -287,6 +305,8 @@ a {
 #chart1,
 #chart {
     height: 400px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .item-side-menu {
@@ -386,9 +406,10 @@ a {
 /* الرسالة  */
 .messages-area {
     background-color: rgb(243, 239, 216);
-    width: 300px;
+    width: 320px;
     left: -30px;
-    top: 35px;
+    /* right: 15px; */
+    top: 50px;
     display: inline-block;
     background: #f1f1f1;
     padding: 10px 15px;
@@ -402,21 +423,27 @@ a {
     overflow: hidden;
     /* اخفاء الرسالة فقط عند الضغط عليها تظهر القائمة */
     display: none;
+    z-index: 999;
+
+    position: fixed;
+
 }
 /* ميديا كويري لشاشات الموبايل */
 @media (max-width: 576px) {
   #messages-area {
     position: fixed !important; /* ثبتيها على الشاشة */
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100% !important;
-    max-height: 100vh;
+    top: 66px;
+    left: auto;
+    right: 8px;
+    /* width: 100% !important; */
+    width: 260px;
+    max-width: 260px;
+   
     overflow-y: auto; /* سكرول إذا في رسائل كتيرة */
     background: #fff; /* خلفية واضحة */
     z-index: 1050; /* فوق كل العناصر */
-    border-radius: 0; /* بدون زوايا مستديرة */
-    padding: 15px;
+    border-radius: 15px 15px 15px 0; /* بدون زوايا مستديرة */
+    padding: 8px 10px;
   }
 
   #messages-area h3 {
@@ -429,7 +456,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 12px 0;
+    padding: 6px 0;
     border-bottom: 1px solid #ddd;
   }
 
